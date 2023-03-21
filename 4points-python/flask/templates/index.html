@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        body{
+            font-size: 120%;
+        }
+        button, input {
+            font-size: 100%;
+            padding: 10px;
+            margin: 10px;
+        }
+        th,td{
+            padding: 10px;    
+            text-align: left;
+            font-size: 100%;
+        }
+        div{
+            margin: 10px;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="float: left;">
+        <h1>Input Parameters</h1>
+        <form action="/" method="POST">
+            <input type="text" name="iterations" placeholder="iterations"><br>
+            <input type="text" name="base" placeholder="base"><br>
+            <input type="text" name="power" placeholder="power"><br>
+            <input type="text" name="lr" placeholder="lr"><br>
+            <input type="text" name="points" placeholder="points"><br>
+            <input type="text" name="fps" placeholder="FPS"><br>
+            <input type="submit">
+        </form>
+        <button onclick="autofill()">Auto fill Sample Data</button>
+    </div>
+    <video controls style="float: left;">
+        <source src="/static/graph.mp4" type="video/mp4">
+    </video>
+    <div style="float: left;">
+        <h1>Sample Data</h1>
+        <table>
+            {% for i in data %}
+            <tr><th>{{i}}: </th><td>{{data[i]}}</td></tr>
+            {% endfor %}
+        </table>
+    </div>
+    <script>
+        function autofill(){
+            document.getElementsByName('iterations')[0].value = 100;
+            document.getElementsByName('base')[0].value = 10;
+            document.getElementsByName('power')[0].value = 3;
+            document.getElementsByName('lr')[0].value = 0.01;
+            document.getElementsByName('points')[0].value = '0,0|1,0|-1,1|2,1';
+            document.getElementsByName('fps')[0].value = 30;
+        }
+    </script>
+</body>
+
+</html>
