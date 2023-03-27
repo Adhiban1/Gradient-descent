@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        th{
+            text-align: right;
+        }
+        th,td{
+            padding: 10px;
+        }
+        body{
+            margin: 25px;
+            font-size: 150%;
+        }
+        input{
+            font-size: 100%;
+            padding: 5px;
+            margin: 5px;
+        }
+        #graph{
+            margin-left: 50px;
+            margin-right: 50px;
+            height: 800px;
+        }
+    </style>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+    </script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Gradent Descent Python & C++</h1>
+    </center>
+    <form action="/" method="POST">
+        <input type="text" name="points" placeholder="points">
+        <input type="submit">
+    </form>
+    <table>
+        <tr><th>Loss:</th><td>{{loss}}</td></tr>
+        <tr><th>Equation:</th><td>{{equ}}</td></tr>
+    </table>
+    <div id="graph"></div>
+    <script>
+        Plotly.plot('graph', {{graph | safe}});
+    </script>
+</body>
+</html>
