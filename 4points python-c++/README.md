@@ -2,11 +2,23 @@
 ## Formula
 The 3rd order equation we have to find out is $\displaystyle y=ax^3+bx^2+cx+d$
 
-$\displaystyle A= \begin{bmatrix}x_1^3&x_1^2&x_1&1\\x_2^3&x_2^2&x_2&1\\x_3^3&x_3^2&x_3&1\\x_4^3&x_4^2&x_4&1\\\end{bmatrix}$
+$$\displaystyle A= \begin{bmatrix}x_1^3&x_1^2&x_1&1\\
+x_2^3&x_2^2&x_2&1\\
+x_3^3&x_3^2&x_3&1\\
+x_4^3&x_4^2&x_4&1\\
+\end{bmatrix}$$
 
-$\displaystyle W = \begin{bmatrix}a\\b\\c\\d\end{bmatrix}$
+$$\displaystyle W = \begin{bmatrix}a\\
+b\\
+c\\
+d
+\end{bmatrix}$$
 
-$\displaystyle Y = \begin{bmatrix}y_1\\y_2\\y_3\\y_4\end{bmatrix}$
+$$\displaystyle Y = \begin{bmatrix}y_1\\
+y_2\\
+y_3\\
+y_4
+\end{bmatrix}$$
 
 $\hat{Y} = A \cdot W$
 
