@@ -1,3 +1,4 @@
+#!/home/adhiban/anaconda3/bin/python
 import ctypes
 import numpy as np
 import plotly.express as px
